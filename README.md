@@ -1,3 +1,3 @@
-##SSMP Frontend
+# SSMP Frontend
 
 *Sail Student Management Portal*
