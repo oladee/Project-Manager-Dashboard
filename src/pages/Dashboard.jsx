@@ -15,6 +15,26 @@ const Dashboard = () => {
           );
         })}
       </Part>
+      <Part title="Instructors">
+        {Instructors.map((x) => {
+          return (
+            <div className=" py-3 border-t-2" key={x.Phone}>
+              <h1 className=" font-medium">{x.instructorName}</h1>
+              <p>{x.Emailaddress}</p>
+            </div>
+          );
+        })}
+      </Part>
+      <Part title="Instructors">
+        {Instructors.map((x) => {
+          return (
+            <div className=" py-3 border-t-2" key={x.Phone}>
+              <h1 className=" font-medium">{x.instructorName}</h1>
+              <p>{x.Emailaddress}</p>
+            </div>
+          );
+        })}
+      </Part>
       <Part title="Support Requests">
         {Request.map((x) => (
           <div>{x.name}</div>
