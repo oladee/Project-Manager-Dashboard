@@ -2,7 +2,7 @@ import Part from "../components/Part";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className=''>
       <h2 className="font-medium text-3xl">Dashboard</h2>
       <p>Welcome to Learning Management Dashboard</p>
       <Part title="Instructors">
