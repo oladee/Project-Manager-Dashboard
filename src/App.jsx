@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className='flex'>
       <Sidepane/>
-      <main className='mt-16 p-3 bg-slate-200 h-full w-full md:ml-[25%]'>
+      <main className='mt-16 p-3 bg-slate-200 h-full w-full md:ml-[25%] md:pl-8 md:pt-8'>
       <Navbar/>
       <Dashboard/>
       </main>
