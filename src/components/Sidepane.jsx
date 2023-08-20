@@ -7,7 +7,7 @@ import DashboardIcon from '../assets/DashboardIcon.svg'
 
 const Sidepane = () => {
   return (
-    <div className='hidden md:block w-[25%] bg-white overflow-y-auto fixed top-0 left-0 z-10 max-h-[100vh] p-2'>
+    <div className='hidden md:block w-[25%] bg-white overflow-y-auto fixed top-0 left-0 z-10 max-h-[100vh] p-2 sideMenu'>
       <nav className='flex items-center justify-between pb-2'>
         <img className='w-28' src={sailLogo} alt="sail logo" />
         <img src={hamburger} alt="hamburger icon" />
