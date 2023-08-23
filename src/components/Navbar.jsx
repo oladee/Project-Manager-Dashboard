@@ -5,7 +5,7 @@ import notification from '../assets/notification.png'
 import profileIcon from '../assets/profile-user.png'
 const Navbar = () => {
   return (
-    <div className='w-[75%]'>
+    <div className='w-'>
         <nav className='flex items-center justify-between px-4 py-2 fixed top-0 right-0 bg-white w-full md:w-[80%]'>
             <div className='flex items-center'>
             <img className='md:hidden' src={hamburger} alt="hamburger menu" />

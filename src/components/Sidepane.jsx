@@ -4,23 +4,24 @@ import sailLogo from '../assets/Sail logo.png'
 import arrowside from '../assets/arrowside.svg'
 import arrowdown from '../assets/arrowdown.svg'
 import DashboardIcon from '../assets/DashboardIcon.svg'
+import { SettingFilled } from '@ant-design/icons/lib/icons'
 
 const Sidepane = () => {
   return (
-    <div className='hidden md:block w-[25%] bg-white overflow-y-auto fixed top-0 left-0 z-10 max-h-[100vh] p-2'>
-      <nav className='flex items-center justify-between pb-2'>
+    <div className=' w-auto'>
+      <nav className='flex items-center justify-between'>
         <img className='w-28' src={sailLogo} alt="sail logo" />
         <img src={hamburger} alt="hamburger icon" />
       </nav>
+
       <ul className='mt-8'>
         <Sidepanecontent heading='Dashboard' icon={DashboardIcon}/>
-        <Sidepanecontent heading='Courses' arrow={true} icon={DashboardIcon}/>
         <Sidepanecontent heading='Instructors' arrow={true} icon={DashboardIcon}/>
         <Sidepanecontent heading='Students' icon={DashboardIcon}/>
         <Sidepanecontent heading='Enrolment' arrow={true} icon={DashboardIcon}/>
-        <Sidepanecontent heading='Messages' icon={DashboardIcon}/>
+        <Sidepanecontent heading='Upload Events' icon={DashboardIcon}/>
         <Sidepanecontent heading='Admin Profile' icon={DashboardIcon}/>
-        <Sidepanecontent heading='Settings' icon={DashboardIcon}/>
+        <Sidepanecontent heading='Settings' icon={ <SettingFilled/>  }/>
       </ul>
     </div>
   )
@@ -29,7 +30,7 @@ const Sidepane = () => {
 export default Sidepane
 
 
-const Sidepanecontent = ({heading,icon, arrow, children}) => {
+const Sidepanecontent = ({heading, icon, arrow, children}) => {
 
   const [direction, setDirection] = useState(false)
 
@@ -50,4 +51,19 @@ const Sidepanecontent = ({heading,icon, arrow, children}) => {
     </div>
   </div>)
 }
+
+
+
+
+import {
+  AiOutlineSlack,
+  AiOutlineBook,
+  AiOutlineCarryOut,
+  AiOutlineSnippets,
+  AiOutlineDashboard,
+  AiOutlineExport,
+  AiFillSetting
+} from "react-icons/ai";
+import { RiDashboardFill } from "react-icons/ri";
+import { Link, useLocation } from "react-router-dom";
 
