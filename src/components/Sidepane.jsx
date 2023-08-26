@@ -3,10 +3,11 @@ import hamburger from "../assets/icon-menu.svg";
 import sailLogo from "../assets/Sail logo.png";
 import arrowside from "../assets/arrowside.svg";
 import arrowdown from "../assets/arrowdown.svg";
-import DashboardIcon from "../assets/DashboardIcon.svg";
-import { NavLink } from "react-router-dom";
-import adminpic from "../assets/Admin profile.png";
-import adminpic1 from "../assets/setting.png";
+import DashboardIcon from "../assets/dashboard-svgrepo-com.svg";
+import { NavLink, Link } from "react-router-dom";
+import admin from "../assets/admin-with-cogwheels-svgrepo-com.svg";
+import messageicon from '../assets/messages-svgrepo-com.svg';
+import studentIcon from '../assets/boy-and-girl-students-svgrepo-com.svg'
 
 const Sidepane = ({ showSidebar, setShowSidebar }) => {
   function handleSidebar() {
@@ -33,14 +34,14 @@ const Sidepane = ({ showSidebar, setShowSidebar }) => {
           arrow={true}
           icon={DashboardIcon}
         />
-        <Sidepanecontent heading="Students" icon={DashboardIcon} />
+        <Sidepanecontent heading="Students" icon={studentIcon} />
         <Sidepanecontent
           heading="Enrolment"
           arrow={true}
           icon={DashboardIcon}
         />
-        <Sidepanecontent heading="Messages" icon={DashboardIcon} />
-        <Sidepanecontent heading="Admin Profile" icon={adminpic1} />
+        <Sidepanecontent heading="Messages" icon={messageicon} />
+        <Sidepanecontent heading="Admin Profile" icon={admin} />
         <Sidepanecontent heading="Settings" icon={DashboardIcon} />
       </ul>
     </div>
@@ -60,15 +61,18 @@ const Sidepanecontent = ({ heading, to, icon, arrow, children }) => {
     <NavLink
       onClick={directionHandler}
       className="flex items-center p-2 py-4 mb-3 hover:bg-slate-200 sideContent w-[100%]"
+      to={to}
     >
-      <img src={icon} alt="" className="w-8  bg-transparent pr-4" />
-      <NavLink className="text-xl text-slate-4 " to={to}>
-        {heading}
-      </NavLink>
+      <Link>
+        <img src={icon} alt="" className="w-8 bg-transparent mr-4 pr-0" />
+      </Link>
+      <h5 className="text-xl text-slate-4 ">
+        <Link>{heading}</Link>
+      </h5>
       {arrow && (
         <img
           src={direction ? arrowdown : arrowside}
-          alt=""
+          alt="arrow icon"
           className="ml-auto"
         />
       )}
